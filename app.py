@@ -80,6 +80,10 @@ def generate_quote(category, preference, profession, interest):
     
     
 # Define the API endpoint
+@app.get("/test")
+async def read_item():
+    return {"message": "Success"}
+
 @app.post("/generate-quote")
 def get_quote(request: QuoteRequest):
     print("Received request:", request)
