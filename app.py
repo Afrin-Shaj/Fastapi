@@ -77,6 +77,8 @@ def generate_quote(category, preference, profession, interest):
     except Exception as e:
         print(f"Error: {e}")
         return f"An error occurred while generating the quote: {e}"
+    
+    
 # Define the API endpoint
 @app.post("/generate-quote")
 def get_quote(request: QuoteRequest):
